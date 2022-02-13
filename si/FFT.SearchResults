@@ -1,0 +1,380 @@
+---- status Matches (379 in 18 files) ----
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t CFSR;                         /*!< Offset: 0x28  Configurable Fault Status Register                    */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t HFSR;                         /*!< Offset: 0x2C  Hard Fault Status Register                            */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t DFSR;                         /*!< Offset: 0x30  Debug Fault Status Register                           */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t AFSR;                         /*!< Offset: 0x3C  Auxiliary Fault Status Register                       */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):/* SCB Configurable Fault Status Registers Definitions */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):#define SCB_CFSR_USGFAULTSR_Pos            16                                             /*!< SCB CFSR: Usage Fault Status Register Position */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):#define SCB_CFSR_USGFAULTSR_Msk            (0xFFFFul << SCB_CFSR_USGFAULTSR_Pos)          /*!< SCB CFSR: Usage Fault Status Register Mask */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):#define SCB_CFSR_BUSFAULTSR_Pos             8                                             /*!< SCB CFSR: Bus Fault Status Register Position */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):#define SCB_CFSR_BUSFAULTSR_Msk            (0xFFul << SCB_CFSR_BUSFAULTSR_Pos)            /*!< SCB CFSR: Bus Fault Status Register Mask */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):#define SCB_CFSR_MEMFAULTSR_Pos             0                                             /*!< SCB CFSR: Memory Manage Fault Status Register Position */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):#define SCB_CFSR_MEMFAULTSR_Msk            (0xFFul << SCB_CFSR_MEMFAULTSR_Pos)            /*!< SCB CFSR: Memory Manage Fault Status Register Mask */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):/* SCB Hard Fault Status Registers Definitions */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):/* SCB Debug Fault Status Register Definitions */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t CTRL;                         /*!< Offset: 0x00  SysTick Control and Status Register */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):/* SysTick Control / Status Register Definitions */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t LSR;                          /*!< Offset:       ITM Lock Status Register                  */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):/* ITM Lock Status Register Definitions */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):  __IO uint32_t DHCSR;                        /*!< Offset: 0x00  Debug Halting Control and Status Register    */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core):/* Debug Halting Control and Status Register */
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core): * Read the pending register in NVIC and return 1 if its status is pending, 
+Core_cm3.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\core): * Read the active register in NVIC and returns 1 if its status is active, 
+Main.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):	arm_status status;
+Main.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):		if( status != ARM_MATH_SUCCESS)
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  RCC_CFGR_SWS                        ((uint32_t)0x0000000C)        /*!< SWS[1:0] bits (System Clock Switch Status) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR2_IRS                        ((uint8_t)0x01)               /*!< Interrupt Rising Edge status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR2_ILS                        ((uint8_t)0x02)               /*!< Interrupt Level status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR2_IFS                        ((uint8_t)0x04)               /*!< Interrupt Falling Edge status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR3_IRS                        ((uint8_t)0x01)               /*!< Interrupt Rising Edge status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR3_ILS                        ((uint8_t)0x02)               /*!< Interrupt Level status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR3_IFS                        ((uint8_t)0x04)               /*!< Interrupt Falling Edge status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR4_IRS                        ((uint8_t)0x01)               /*!< Interrupt Rising Edge status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR4_ILS                        ((uint8_t)0x02)               /*!< Interrupt Level status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FSMC_SR4_IFS                        ((uint8_t)0x04)               /*!< Interrupt Falling Edge status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  SDIO_RESP0_CARDSTATUS0              ((uint32_t)0xFFFFFFFF)        /*!< Card Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  SDIO_RESP1_CARDSTATUS1              ((uint32_t)0xFFFFFFFF)        /*!< Card Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  SDIO_RESP2_CARDSTATUS2              ((uint32_t)0xFFFFFFFF)        /*!< Card Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  SDIO_RESP3_CARDSTATUS3              ((uint32_t)0xFFFFFFFF)        /*!< Card Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  SDIO_RESP4_CARDSTATUS4              ((uint32_t)0xFFFFFFFF)        /*!< Card Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP0R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP0R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP1R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP1R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP2R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP2R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP3R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP3R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP4R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP4R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP5R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP5R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP6R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP6R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP7R_STAT_TX                    ((uint16_t)0x0030)            /*!< STAT_TX[1:0] bits (Status bits, for transmission transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_EP7R_STAT_RX                    ((uint16_t)0x3000)            /*!< STAT_RX[1:0] bits (Status bits, for reception transfers) */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_FNR_RXDM                        ((uint16_t)0x4000)            /*!< Receive Data - Line Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  USB_FNR_RXDP                        ((uint16_t)0x8000)            /*!< Receive Data + Line Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):/*!< CAN control and status registers */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define  FLASH_ACR_PRFTBS                    ((uint8_t)0x20)               /*!< Prefetch Buffer Status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):/* Bit definition for Ethernet MAC PMT Control and Status Register */ 
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):/* Bit definition for Ethernet MAC Status Register */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_MACSR_TSTS      ((uint32_t)0x00000200)  /* Time stamp trigger status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_MACSR_MMCTS     ((uint32_t)0x00000040)  /* MMC transmit status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_MACSR_MMMCRS    ((uint32_t)0x00000020)  /* MMC receive status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_MACSR_MMCS      ((uint32_t)0x00000010)  /* MMC status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_MACSR_PMTS      ((uint32_t)0x00000008)  /* PMT status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):/* Bit definition for Ethernet DMA Status Register */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_TSTS       ((uint32_t)0x20000000)  /* Time-stamp trigger status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_PMTS       ((uint32_t)0x10000000)  /* PMT status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_MMCS       ((uint32_t)0x08000000)  /* MMC status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_EBS        ((uint32_t)0x03800000)  /* Error bits status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):  #define ETH_DMASR_TPS_Waiting         ((uint32_t)0x00200000)  /* Running - waiting for status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_ERS        ((uint32_t)0x00004000)  /* Early receive status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_FBES       ((uint32_t)0x00002000)  /* Fatal bus error status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_ETS        ((uint32_t)0x00000400)  /* Early transmit status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_RWTS       ((uint32_t)0x00000200)  /* Receive watchdog timeout status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_RPSS       ((uint32_t)0x00000100)  /* Receive process stopped status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_RBUS       ((uint32_t)0x00000080)  /* Receive buffer unavailable status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_RS         ((uint32_t)0x00000040)  /* Receive status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_TUS        ((uint32_t)0x00000020)  /* Transmit underflow status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_ROS        ((uint32_t)0x00000010)  /* Receive overflow status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_TJTS       ((uint32_t)0x00000008)  /* Transmit jabber timeout status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_TBUS       ((uint32_t)0x00000004)  /* Transmit buffer unavailable status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_TPSS       ((uint32_t)0x00000002)  /* Transmit process stopped status */
+Stm32f10x.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\user):#define ETH_DMASR_TS         ((uint32_t)0x00000001)  /* Transmit status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Gets the selected ADC reset calibration registers status.
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of RSTCAL bit */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the RSTCAL bit status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Gets the selected ADC calibration status.
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of CAL bit */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the CAL bit status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Gets the selected ADC Software start conversion Status.
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of SWSTART bit */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the SWSTART bit status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Gets the selected ADC Software start injected conversion Status.
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of JSWSTART bit */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the JSWSTART bit status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified ADC flag */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the ADC_FLAG status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the ADC_IT enable bit status */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified ADC interrupt */
+Stm32f10x_adc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the ADC_IT status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* At this step, return the status of initialization */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval status of the requested mode which can be 
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  uint8_t status = CAN_ModeStatus_Failed;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = CAN_ModeStatus_Failed;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = CAN_ModeStatus_Success;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = CAN_ModeStatus_Failed;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = CAN_ModeStatus_Success;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = CAN_ModeStatus_Failed;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = CAN_ModeStatus_Success;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = CAN_ModeStatus_Failed;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return  (uint8_t) status;
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval status: CAN_Sleep_Ok if sleep entered, CAN_Sleep_Failed in an 
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Sleep mode status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* return sleep mode status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval status:  CAN_WakeUp_Ok if sleep mode left, CAN_WakeUp_Failed in an 
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Sleep mode status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* return wakeup status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    /* Check the status of the specified CAN flag */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    /* Check the status of the specified CAN flag */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    /* Check the status of the specified CAN flag */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    /* Check the status of the specified CAN flag */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    /* Check the status of the specified CAN flag */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the CAN_FLAG status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the CAN_IT status */
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):                        of the CAN Bus status*/ 
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):                        of the CAN Bus status*/
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):                        of the CAN Bus status*/
+Stm32f10x_can.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):                  of the CAN Bus status*/
+Stm32f10x_cec.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Gets the CEC flag status
+Stm32f10x_cec.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the CEC_FLAG status */
+Stm32f10x_cec.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the CEC IT enable bit status */
+Stm32f10x_cec.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified CEC interrupt */
+Stm32f10x_cec.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the CEC_IT status */
+Stm32f10x_dac.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified DAC flag */
+Stm32f10x_dac.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the DAC_FLAG status */
+Stm32f10x_dac.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the DAC_IT enable bit status */
+Stm32f10x_dac.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified DAC interrupt */
+Stm32f10x_dac.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the DAC_IT status */
+Stm32f10x_dma.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified DMAy flag */
+Stm32f10x_dma.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the DMAy_FLAG status */
+Stm32f10x_dma.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified DMAy interrupt */
+Stm32f10x_dma.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the DMA_IT status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):   |FLASH_GetFlagStatus                 |    Yes     |      Yes      | - For STM32F10x_XL devices: return Bank1 and Bank2's flag status|
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):   |                                    |            |               | - For other devices: return Bank1's flag status                |
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):   |FLASH_GetStatus                     |    Yes     |      Yes      | - Return the status of Bank1 (for all devices)                 |
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):   | FLASH_GetBank1Status               |    Yes     |      Yes      | - Return the status of Bank1                                   |
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):   | FLASH_GetBank2Status               |    Yes     |      No       | - Return the status of Bank2                                   |
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @param  FLASH_PrefetchBuffer: specifies the Prefetch buffer status.
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_BUSY, FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank1Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank1Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank2Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank2Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Erase Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastBank1Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank1Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank2Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Erase Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastBank1Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank1Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Erase Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastBank2Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank2Operation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Erase Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      if (status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the erase status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank1Operation(ProgramTimeout); 
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):        status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank1Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank1Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):        status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Program Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank1Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Program Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Option Byte Data Program Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if((status == FLASH_COMPLETE) && (WRP1_Data != 0xFF))
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if((status == FLASH_COMPLETE) && (WRP2_Data != 0xFF))
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if((status == FLASH_COMPLETE)&& (WRP3_Data != 0xFF))
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the write protection operation Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;       
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(EraseTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      status = FLASH_WaitForLastOperation(EraseTimeout); 
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):      if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the protection operation Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;       
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG, 
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE; 
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Option Byte program Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG, 
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE; 
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  if(status == FLASH_COMPLETE)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_WaitForLastOperation(ProgramTimeout);
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    if(status != FLASH_TIMEOUT)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Option Byte program Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Checks whether the FLASH Read Out Protection Status is set or not.
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH ReadOut Protection Status(SET or RESET)
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Checks whether the FLASH Prefetch Buffer status is set or not.
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Prefetch Buffer Status (SET or RESET).
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the new state of FLASH Prefetch Buffer Status (SET or RESET) */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Returns the FLASH Status.
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_BUSY, FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Flash Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Returns the FLASH Bank1 Status.
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_BUSY, FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Flash Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Returns the FLASH Bank2 Status.
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_BUSY, FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the Flash Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check for the Flash Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_GetBank1Status();
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  while((status == FLASH_BUSY) && (Timeout != 0x00))
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_GetBank1Status();
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_TIMEOUT;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the operation status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check for the Flash Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_GetBank1Status();
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  while((status == FLASH_FLAG_BANK1_BSY) && (Timeout != 0x00))
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_GetBank1Status();
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_TIMEOUT;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the operation status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval FLASH Status: The returned value can be: FLASH_ERROR_PG,
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  FLASH_Status status = FLASH_COMPLETE;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check for the Flash Status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  status = FLASH_GetBank2Status();
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  while((status == (FLASH_FLAG_BANK2_BSY & 0x7FFFFFFF)) && (Timeout != 0x00))
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_GetBank2Status();
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = FLASH_TIMEOUT;
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the operation status */
+Stm32f10x_flash.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_flash.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc):  * @brief  FLASH Status  
+Stm32f10x_fsmc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the flag status */
+Stm32f10x_fsmc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the flag status */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *    It compares the status registers (SR1 and SR2) content to a given event
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *    It returns SUCCESS if the current status includes the given flags 
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *    and returns ERROR if one or more flags are missing in the current status.
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *            and return to correct communication status.
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *     Using the function I2C_GetLastEvent() which returns the image of both status 
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *     registers in a single word (uint32_t) (Status Register 2 value is shifted left 
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *     by 16 bits and concatenated to Status Register 1).
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *     Using the function I2C_GetFlagStatus() which simply returns the status of 
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *        - When calling this function, the Status register is accessed. Some flags are
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src): *          cleared when the status register is accessed. So checking the status
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  ErrorStatus status = ERROR;
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Read the I2Cx status register */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the last event value from I2C status register */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = SUCCESS;
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = ERROR;
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return status */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return status;
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Read the I2Cx status register */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the last event value from I2C status register */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return status */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the I2C_FLAG status */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified I2C flag */
+Stm32f10x_i2c.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the I2C_IT status */
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *    It compares the status registers (SR1 and SR2) content to a given event
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *    It returns SUCCESS if the current status includes the given flags 
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *    and returns ERROR if one or more flags are missing in the current status.
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *            and return to correct communication status.
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *     Using the function I2C_GetLastEvent() which returns the image of both status 
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *     registers in a single word (uint32_t) (Status Register 2 value is shifted left 
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *     by 16 bits and concatenated to Status Register 1).
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *     Using the function I2C_GetFlagStatus() which simply returns the status of 
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *        - When calling this function, the Status register is accessed. Some flags are
+Stm32f10x_i2c.h (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\inc): *          cleared when the status register is accessed. So checking the status
+Stm32f10x_iwdg.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the flag status */
+Stm32f10x_pwr.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the flag status */
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  ErrorStatus status = ERROR;
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = SUCCESS;
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):    status = ERROR;
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  return (status);
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the flag status */
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified RCC interrupt */
+Stm32f10x_rcc.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the RCC_IT status */
+Stm32f10x_sdio.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Sets the power status of the controller.
+Stm32f10x_sdio.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @brief  Gets the power status of the controller.
+Stm32f10x_sdio.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  * @retval Power status of the controller. The returned value can
+Stm32f10x_spi.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified SPI/I2S flag */
+Stm32f10x_spi.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the SPI_I2S_FLAG status */
+Stm32f10x_spi.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Get the SPI_I2S_IT enable bit status */
+Stm32f10x_spi.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Check the status of the specified SPI/I2S interrupt */
+Stm32f10x_spi.c (d:\stm32\alientek ministm32 实验11 tft lcd液晶显示实验\stm32f10x_fwlib\src):  /* Return the SPI_I2S_IT status */

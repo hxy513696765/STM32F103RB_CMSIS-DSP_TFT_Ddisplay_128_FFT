@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"..\obj\stm32f10x_it.o"
+"..\obj\system_stm32f10x.o"
+"..\obj\main.o"
+"..\obj\led.o"
+"..\obj\lcd.o"
+"..\obj\adc.o"
+"..\obj\delay.o"
+"..\obj\sys.o"
+"..\obj\usart.o"
+"..\obj\startup_stm32f10x_md.o"
+"..\obj\stm32f10x_gpio.o"
+"..\obj\stm32f10x_rcc.o"
+"..\obj\stm32f10x_usart.o"
+"..\obj\misc.o"
+"..\obj\stm32f10x_adc.o"
+"..\obj\stm32f10x_dma.o"
+"D:\SoftwareInstall\Keil5 MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Lib\ARM\arm_cortexM3l_math.lib"
+--library_type=microlib --strict --scatter "..\OBJ\LCD.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\LCD.map" -o ..\OBJ\LCD.axf
